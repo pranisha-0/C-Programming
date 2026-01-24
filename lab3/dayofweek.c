@@ -1,4 +1,5 @@
 #include <stdio.h>
+//written by Pranisha C
 int main () {
     int day;
     printf("Enter a number 1-7: ");
