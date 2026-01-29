@@ -32,23 +32,35 @@
     
 // }
 
-///
+/////
 //sum = (i=0 to n) X^i/i!
+// #include <stdio.h>
+// #include <math.h>
+// int main () {
+//     int i, j, n;
+//     double x, sum = 0.0, nume, deno;
+//     printf("Enter the value of x and n: ");
+//     scanf("%lf%d", &x, &n);
+//      for(i=0; i<n; i++) {
+//         nume = pow(x, i);
+//         deno = 1;
+//         for(j=1; j<=i; j++) {
+//             deno *= j;
+//         }
+//         sum += nume/deno;
+//      }
+//         printf("Sum is: %lf", sum);
+//         return 0;
+// }
+
+
+///
 #include <stdio.h>
-#include <math.h>
-int main () {
-    int i, j, n;
-    double x, sum = 0.0, nume, deno;
-    printf("Enter the value of x and n: ");
-    scanf("%lf%d", &x, &n);
-     for(i=0; i<n; i++) {
-        nume = pow(x, i);
-        deno = 1;
-        for(j=1; j<=i; j++) {
-            deno *= j;
-        }
-        sum += nume/deno;
-     }
-        printf("Sum is: %lf", sum);
-        return 0;
+int main() {
+    int i, j, sum=0, n;
+    n=5;
+    for(i=1; i<=n; i++) {
+        sum += i;
+        printf("sum after adding %d is %d\n", i, sum);
+    }
 }
