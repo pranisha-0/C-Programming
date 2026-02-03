@@ -1,17 +1,16 @@
 #include <stdio.h>
 int main() {
-    float ft, t, mft;
-    for(t = 0; t <= 2.5; t += 0.1) {
-        ft = (2*t*t*t)-(15*t*t)+(36*t)-10;
-        if(t==0) {
-            float mt=0;
-            mft=mt; 
-        }
+    float ft, mft, mt, t;
+    t=0;
+    ft=2*t*t*t-15*t*t+36*t-10;
+    mft = ft;
+    mt = t;
+    for(t=0; t<=2.5; t+=0.1) {
+        ft=2*t*t*t-15*t*t+36*t-10;
         if(ft>mft) {
-            mft = ft;
+            mft=ft;
+            mt=t;
         }
-        continue;
     }
-    printf("The max value of ft is %.3f \n ", mft);
-    return 0;
+    printf("The max value is %.3f at %.0f. ", mft, mt);
 }
