@@ -1,16 +1,16 @@
-
 #include <stdio.h>
 
 int main() {
-    int rows = 6;
+    int row = 6;
     
-    for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < row - i - 1; j++) {
+            printf(" ");
+        }
+        int value = 1;
         for (int j = 0; j <= i; j++) {
-            int val = 1;
-            for (int k = 0; k < j; k++) {
-                val = val * (i - k) / (k + 1);
-            }
-            printf("%d ", val);
+            printf("%d ", value);
+            value = value * (i - j) / (j + 1);
         }
         printf("\n");
     }
