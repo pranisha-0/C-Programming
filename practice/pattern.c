@@ -5,7 +5,7 @@ int main() {
     for(j=0; j<space; j++) {
       printf("");
     } 
-    for(j=0; j<star; j=j+2) {
+    for(j=0; j<star; j++) {
       printf(" * ");
     }
     printf("\n");
