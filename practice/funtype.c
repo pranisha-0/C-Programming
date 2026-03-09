@@ -31,8 +31,8 @@
 //     }
 //     printf("\nThe factorial of %d is %d. \n", n, product);
 //     }
-    
 // }
+
 
 //without return type with arguments
 // #include <stdio.h>
@@ -54,7 +54,6 @@
 //         product = product * i;
 //         }
 //     printf("\nThe factorial of %d is %d. \n", x, product);
-    
 // }
 
 
@@ -74,32 +73,54 @@
 //         product = product * i;
 //     }
 //       return product;
-    
 // }
 
 
 //with return type with arguments
+// #include <stdio.h>
+// int fact(int a);
+// int main() {
+//     int n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     if(n < 0) {
+//         printf("\n Doesnt exist.\n");
+//     }
+//     else{
+//         int res = fact(n);
+//         printf("\nThe factorial of %d is %d. \n", n, res);
+//     }
+//     return 0;
+// }
+// int fact(int a) {
+//     int product = 1, i;
+// for(i=1; i<=a; i++) {
+//         product = product * i;
+//     }
+//     return product;    
+// }
+
+
+//recursive function
 #include <stdio.h>
 int fact(int a);
 int main() {
     int n;
     printf("Enter a number: ");
     scanf("%d", &n);
-    if(n < 0) {
-        printf("\n Doesnt exist.\n");
-    }
-    else{
-        int res = fact(n);
-        printf("\nThe factorial of %d is %d. \n", n, res);
-    }
-    return 0;
+    int pr = fact(n);
+    printf("The factorial is: %d. \n", pr);
 }
 int fact(int a) {
-    int product = 1, i;
-
-    for(i=1; i<=a; i++) {
-        product = product * i;
+    if(a == 0) {
+        return 1;
     }
-    return product;
-    
+    else if(a == 1) {
+        return 1;
+    }
+    else {
+        int res;
+        res = a * fact(a-1);
+        return res;
+    }
 }
