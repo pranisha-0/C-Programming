@@ -38,21 +38,37 @@
 // }
 
 //array with function
+// #include <stdio.h>
+// void show(int [], int);
+// int main() {
+//     int a[100], n, i;
+//     printf("Enter size: ");
+//     scanf("%d", &n);
+//     printf("reading the array: ");
+//     for(i=0; i<n; i++) {
+//         scanf("%d", &a[i]);
+//     }
+//     show(a, n);
+// }
+// void show(int a[], int n) {
+//     int j;
+//     for (j=0; j<n; j++) {
+//         printf("%d ", a[j]);
+//     }
+// }
+
+//2D array reading
 #include <stdio.h>
-void show(int [], int);
 int main() {
-    int a[100], n, i;
-    printf("Enter size: ");
-    scanf("%d", &n);
-    printf("reading the array: ");
-    for(i=0; i<n; i++) {
-        scanf("%d", &a[i]);
-    }
-    show(a, n);
-}
-void show(int a[], int n) {
-    int j;
-    for (j=0; j<n; j++) {
-        printf("%d ", a[j]);
-    }
+    int a[10][10], row, col;
+        printf("row and column: ");
+        scanf("%d %d", &row, &col);
+        printf("enter elements \n");
+        for(int i=0; i<row; i++) {
+            for(int j=0; j<col; j++) {
+            printf("enter elem of %d row, %d col: ", i+1, j+1);
+            scanf("%d", &a[i][j]);
+            }
+        }
+
 }
