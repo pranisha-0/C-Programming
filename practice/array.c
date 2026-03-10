@@ -57,18 +57,57 @@
 //     }
 // }
 
-//2D array reading
+//2D array reading and matrix printing
+// #include <stdio.h>
+// int main() {
+//     int a[10][10], row, col;
+//         printf("row and column: ");
+//         scanf("%d %d", &row, &col);
+//         printf("enter elements \n");
+//         for(int i=0; i<row; i++) {
+//             for(int j=0; j<col; j++) {
+//             printf("enter elem of %d row, %d col: ", i+1, j+1);
+//             scanf("%d", &a[i][j]);
+//             }
+//         }
+//         printf("printing elements \n");
+//         for(int i=0; i<row; i++) {
+//             for(int j=0; j<col; j++) {
+//             printf("%d ", a[i][j]);
+//             }
+//             printf("\n");
+//         }
+
+// }
+
+//matrix add
 #include <stdio.h>
 int main() {
-    int a[10][10], row, col;
+    int a[10][10],b[10][10], c[10][10], row, col;
         printf("row and column: ");
         scanf("%d %d", &row, &col);
-        printf("enter elements \n");
+        printf("enter elements of a: \n");
         for(int i=0; i<row; i++) {
             for(int j=0; j<col; j++) {
-            printf("enter elem of %d row, %d col: ", i+1, j+1);
             scanf("%d", &a[i][j]);
             }
         }
-
-}
+        printf("enter elements of b: \n");
+        for(int i=0; i<row; i++) {
+            for(int j=0; j<col; j++) {
+            scanf("%d", &b[i][j]);
+            }
+        }
+        for(int i=0; i<row; i++) {
+            for(int j=0; j<col; j++) {
+           c[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        printf("sum of matrix is: \n");
+        for(int i=0; i<row; i++) {
+            for(int j=0; j<col; j++) {
+            printf("  %d ", c[i][j]);
+            }
+            printf("\n");
+        }
+    }
