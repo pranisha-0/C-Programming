@@ -102,25 +102,25 @@
 
 
 //recursive function
-#include <stdio.h>
-int fact(int a);
-int main() {
-    int n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    int pr = fact(n);
-    printf("The factorial is: %d. \n", pr);
-}
-int fact(int a) {
-    if(a == 0) {
-        return 1;
-    }
-    else if(a == 1) {
-        return 1;
-    }
-    else {
-        int res;
-        res = a * fact(a-1);
-        return res;
-    }
-}
+// #include <stdio.h>
+// int fact(int a);
+// int main() {
+//     int n;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     int pr = fact(n);
+//     printf("The factorial is: %d. \n", pr);
+// }
+// int fact(int a) {
+//     if(a == 0) {
+//         return 1;
+//     }
+//     else if(a == 1) {
+//         return 1;
+//     }
+//     else {
+//         int res;
+//         res = a * fact(a-1);
+//         return res;
+//     }
+// }

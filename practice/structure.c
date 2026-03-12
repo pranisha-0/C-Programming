@@ -51,20 +51,22 @@
 // }
 
 //passing array of structures in fn
-#include <stdio.h>
-struct info{
-    char nam[20];
-    int age;
-}s[4];
-void disp(struct info s1[]) {
-    for(int i=0; i<4; i++) {
-        printf("%s, %d \n", s[i].nam, s[i].age);
-    }
-}
-int main() {
-    for(int i=0; i<5; i++) {
-        printf("enter name and age: ");
-        scanf("%s %d", s[i].nam, &s[i].age);
-    }
-    disp(s);
-}
+// #include <stdio.h>
+// struct info{
+//     char nam[20];
+//     int age;
+// }s[4];
+// void disp(struct info s1[]) {
+//     for(int i=0; i<4; i++) {
+//         printf("%s, %d \n", s[i].nam, s[i].age);
+//     }
+// }
+// int main() {
+//     for(int i=0; i<5; i++) {
+//         printf("enter name and age: ");
+//         scanf("%s %d", s[i].nam, &s[i].age);
+//     }
+//     disp(s);
+// }
+
+//

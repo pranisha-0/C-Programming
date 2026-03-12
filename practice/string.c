@@ -34,13 +34,13 @@ int main() {
     printf("Enter no of string:");
     scanf("%d", &n);
     for(i=0; i<n; i++) {
-        scanf("%s", name[i]);
+        scanf("%s", name[i]); //string input linxa
     }
     for(i=0; i<=n; i++) {
         for(j=i+1; j<=n; j++) {
-            if(strcmp(name[i], name[j])>0) {
+            if(strcmp(name[i], name[j])>0) {  //sorting 
                 strcpy(temp, name[i]);
-                strcpy(name[i], name[j]);
+                strcpy(name[i], name[j]); //swapping
                 strcpy(name[j], temp);
             }
         }
